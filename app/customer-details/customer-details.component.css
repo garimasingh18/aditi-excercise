@@ -1,0 +1,10 @@
+div{
+    margin-bottom: 20px;
+}
+div label{
+    width: 20%;
+    display: inline-block;
+}
+button{
+    margin-top: 50px;
+}
