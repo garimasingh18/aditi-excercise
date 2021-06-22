@@ -1,0 +1,20 @@
+<div class="float-left">
+    <h2>Customers List</h2>
+    <ul class="customers">
+        <li>
+            <span>Name</span>
+            <span>items</span>
+            <span>Amount</span>
+            <span>Action</span>
+        </li>
+        <li *ngFor="let customer of customers" [class.selected]="customer === selectedHero">
+            <span class="badge">{{customer.fname}} {{customer.lname}}</span>
+            <span>{{customer.item}}</span>
+            <span>{{customer.amount}}</span>
+            <span class="edit" (click)="onSelect(customer)">Edit</span>
+        </li>
+    </ul>
+</div>
+<div class="float-right">
+    <app-customer-details [selectedCustomer]="selectedCustomer"></app-customer-details>
+</div>

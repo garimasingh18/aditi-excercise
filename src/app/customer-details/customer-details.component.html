@@ -1,0 +1,21 @@
+<div>
+    <h2>Edit Customer </h2>
+    <div>
+        <label for="first-name">First name </label>
+        <input id="first-name" [ngModel]="selectedCustomer && selectedCustomer.fname" placeholder="fname" #fname>
+    </div>
+    <div>
+        <label for="last-name">Last name </label>
+        <input id="last-name" [ngModel]="selectedCustomer && selectedCustomer.lname" placeholder="lname" #lname>
+    </div>
+    <div>
+        <label for="item">Item </label>
+        <input id="item" [ngModel]="selectedCustomer && selectedCustomer.item" placeholder="item" #item>
+    </div>
+    <div>
+        <label for="amount">Amount</label>
+        <input id="amount" [ngModel]="selectedCustomer && selectedCustomer.amount" placeholder="amount" #amount>
+    </div>
+
+    <button (click)="updateClick(fname.value,lname.value,item.value,amount.value)">Update</button>
+</div>
